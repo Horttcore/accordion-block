@@ -1,0 +1,9 @@
+{
+  "name": "accordion",
+  "version": "1.0.0",
+  "description": "A simple WordPress accordion block",
+  "main": "index.js",
+  "repository": "https://github.com/Horttcore/accordion",
+  "author": "Ralf Hortt",
+  "license": "GPL-3.0"
+}

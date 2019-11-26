@@ -1,6 +1,6 @@
 const { __ } = wp.i18n;
-const { RichText } = wp.editor;
-const { InnerBlocks } = wp.editor;
+const { RichText, InnerBlocks } = wp.blockEditor;
+const { Component } = wp.element;
 
 export default class Edit extends Component {
   constructor(props) {
@@ -18,23 +18,17 @@ export default class Edit extends Component {
 
     return (
       <div className={classNames}>
-        <div className="accordion__content">
-          <RichText
-            tagName="div"
-            className="accordion__title"
-            label={__("Title")}
-            value={title}
-            placeholder={__("Title")}
-            keepPlaceholderOnFocus
-            onChange={title => setAttributes({ title })}
-          />
-          <div className="accordion__body">
-            {"undefined" !== typeof props.insertBlocksAfter ? (
-              <InnerBlocks />
-            ) : (
-              ""
-            )}
-          </div>
+        <RichText
+          tagName="div"
+          className="accordion__title"
+          label={__("Title")}
+          value={title}
+          placeholder={__("Title")}
+          keepPlaceholderOnFocus
+          onChange={title => setAttributes({ title })}
+        />
+        <div className="accordion__body">
+          <InnerBlocks />
         </div>
       </div>
     );
