@@ -1,6 +1,5 @@
-const { __ } = wp.i18n;
-const { RichText } = wp.editor;
-const { InnerBlocks } = wp.editor;
+const { RichText, InnerBlocks } = wp.blockEditor;
+const { Component } = wp.element;
 
 export default class Save extends Component {
   constructor(props) {
@@ -9,23 +8,20 @@ export default class Save extends Component {
 
   render() {
     const {
-      attributes: { title },
-      className
+      attributes: { title }
     } = this.props;
 
     return (
-      <div className="accordion">
-        <div className="accordion__content">
-          <RichText.Content
-            tagName="div"
-            className="accordion__title"
-            value={title}
-          />
-          <div className="accordion__body">
-           <InnerBlocks.Content />
-          </div>
+      <details className="accordion">
+        <RichText.Content
+          tagName="summary"
+          className="accordion__title"
+          value={title}
+        />
+        <div className="accordion__body">
+          <InnerBlocks.Content />
         </div>
-      </div>
+      </details>
     );
   }
 }
