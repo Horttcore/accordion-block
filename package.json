@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/Horttcore/accordion",
   "author": "Ralf Hortt",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
