@@ -1,0 +1,12 @@
+{
+    "name": "ralfhortt/accordion-block",
+    "type": "wp-block",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ralf Hortt",
+            "email": "me@horttcore.de"
+        }
+    ],
+    "require": {}
+}

@@ -4,5 +4,9 @@ export default {
     source: "html",
     selector: ".accordion__title",
     default: ""
-  }
+  },
+  isOpen: {
+    type: 'bool',
+    default: false,
+  },
 };
