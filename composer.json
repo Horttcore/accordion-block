@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "name": "ralfhortt/accordion",
+=======
+    "name": "ralfhortt/accordion-block",
+>>>>>>> develop
     "type": "wp-block",
     "license": "MIT",
     "authors": [

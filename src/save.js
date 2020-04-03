@@ -8,16 +8,17 @@ export default class Save extends Component {
 
   render() {
     const {
-      attributes: { title }
+      attributes: { title, isOpen }
     } = this.props;
 
     return (
-      <details className="accordion">
-        <RichText.Content
-          tagName="summary"
-          className="accordion__title"
-          value={title}
-        />
+      <details className="accordion" {...(isOpen && { open: true })}>
+        <summary className="accordion__title">
+          <RichText.Content
+            tagName=""
+            value={title}
+          />
+        </summary>
         <div className="accordion__body">
           <InnerBlocks.Content />
         </div>

@@ -1,6 +1,7 @@
 const { __ } = wp.i18n;
-const { RichText, InnerBlocks } = wp.blockEditor;
+const { RichText, InnerBlocks, InspectorControls } = wp.blockEditor;
 const { Component } = wp.element;
+const { PanelBody, ToggleControl } = wp.components;
 
 export default class Edit extends Component {
   constructor(props) {
@@ -9,7 +10,7 @@ export default class Edit extends Component {
 
   render() {
     const {
-      attributes: { title },
+      attributes: { title, isOpen },
       setAttributes,
       className
     } = this.props;
@@ -17,20 +18,31 @@ export default class Edit extends Component {
     let classNames = `${className} accordion`;
 
     return (
-      <div className={classNames}>
-        <RichText
-          tagName="div"
-          className="accordion__title"
-          label={__("Title")}
-          value={title}
-          placeholder={__("Title")}
-          keepPlaceholderOnFocus
-          onChange={title => setAttributes({ title })}
-        />
-        <div className="accordion__body">
-          <InnerBlocks />
+      <>
+        <InspectorControls>
+          <PanelBody title={__('Display Settings')}>
+            <ToggleControl
+              label={__('Open')}
+              checked={isOpen}
+              onChange={(isOpen) => setAttributes({ isOpen })}
+            />
+          </PanelBody>
+        </InspectorControls>
+        <div className={classNames}>
+          <RichText
+            tagName="div"
+            className="accordion__title"
+            label={__("Title")}
+            value={title}
+            placeholder={__("Title")}
+            keepPlaceholderOnFocus
+            onChange={title => setAttributes({ title })}
+          />
+          <div className="accordion__body">
+            <InnerBlocks />
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 }
