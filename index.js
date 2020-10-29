@@ -1,7 +1,7 @@
-import attributes from "./src/attributes";
-import edit from "./src/edit";
-import save from "./src/save";
-import icon from "./src/icon";
+import attributes from "./components/attributes";
+import edit from "./components/edit";
+import save from "./components/save";
+import icon from "./components/icon";
 
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
