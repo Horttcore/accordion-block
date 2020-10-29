@@ -1,5 +1,6 @@
 {
     "name": "ralfhortt/accordion-block",
+    "description": "A WordPress accordion block",
     "type": "wp-block",
     "license": "MIT",
     "authors": [

@@ -10,7 +10,10 @@ registerBlockType("ralfhortt/accordion", {
   title: __("Accordion", "accordion"),
   icon: icon,
   category: "common",
-  keywords: [__("Toogle", "accordion")],
+  keywords: [
+    __("Toogle", "accordion"),
+    __("Collapsable", "accordion")
+  ],
   attributes,
   edit,
   save

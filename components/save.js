@@ -13,12 +13,11 @@ export default class Save extends Component {
 
     return (
       <details className="accordion" {...(isOpen && { open: true })}>
-        <summary className="accordion__title">
-          <RichText.Content
-            tagName=""
-            value={title}
-          />
-        </summary>
+        <RichText.Content
+          tagName="summary"
+          value={title}
+          className="accordion__title"
+        />
         <div className="accordion__body">
           <InnerBlocks.Content />
         </div>
