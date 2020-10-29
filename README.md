@@ -8,7 +8,7 @@ Install via composer
 - `$ composer require ralfhortt/accordion-block`
 
 Import the block
-- `import "../../../vendor/ralfhortt/accordion";`
+- `import "../../vendor/ralfhortt/accordion-block";`
 
 ## Features
 
